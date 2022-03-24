@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/namaaps/static/css/main.95d67fe1.css",
+    "main.js": "/namaaps/static/js/main.bd48de65.js",
+    "static/js/787.c5a8a184.chunk.js": "/namaaps/static/js/787.c5a8a184.chunk.js",
+    "index.html": "/namaaps/index.html",
+    "main.95d67fe1.css.map": "/namaaps/static/css/main.95d67fe1.css.map",
+    "main.bd48de65.js.map": "/namaaps/static/js/main.bd48de65.js.map",
+    "787.c5a8a184.chunk.js.map": "/namaaps/static/js/787.c5a8a184.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.95d67fe1.css",
+    "static/js/main.bd48de65.js"
+  ]
+}
