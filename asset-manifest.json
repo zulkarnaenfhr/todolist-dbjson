@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/namaaps/static/css/main.95d67fe1.css",
-    "main.js": "/namaaps/static/js/main.bd48de65.js",
-    "static/js/787.c5a8a184.chunk.js": "/namaaps/static/js/787.c5a8a184.chunk.js",
-    "index.html": "/namaaps/index.html",
-    "main.95d67fe1.css.map": "/namaaps/static/css/main.95d67fe1.css.map",
-    "main.bd48de65.js.map": "/namaaps/static/js/main.bd48de65.js.map",
-    "787.c5a8a184.chunk.js.map": "/namaaps/static/js/787.c5a8a184.chunk.js.map"
+    "main.css": "/todolist-dbjson/static/css/main.153cde35.css",
+    "main.js": "/todolist-dbjson/static/js/main.44d02dbd.js",
+    "static/js/787.c5a8a184.chunk.js": "/todolist-dbjson/static/js/787.c5a8a184.chunk.js",
+    "index.html": "/todolist-dbjson/index.html",
+    "main.153cde35.css.map": "/todolist-dbjson/static/css/main.153cde35.css.map",
+    "main.44d02dbd.js.map": "/todolist-dbjson/static/js/main.44d02dbd.js.map",
+    "787.c5a8a184.chunk.js.map": "/todolist-dbjson/static/js/787.c5a8a184.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.95d67fe1.css",
-    "static/js/main.bd48de65.js"
+    "static/css/main.153cde35.css",
+    "static/js/main.44d02dbd.js"
   ]
 }
