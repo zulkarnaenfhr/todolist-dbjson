@@ -30,6 +30,7 @@ class Signup extends Component {
             },
             statusPaswordValidation: "", // apakah password sesuai dengan berbagai syarat yang dibutuhkan, true = sesuai
             sameUsernameFound: "",
+            usernameContainsSpace: "",
             showPasswordValidation: false,
         };
 
@@ -39,6 +40,7 @@ class Signup extends Component {
         this.handleid = this.handleid.bind(this);
         this.passwordValidation = this.passwordValidation.bind(this);
         this.handleSameUsername = this.handleSameUsername.bind(this);
+        this.handleUsernameContainsSpace = this.handleUsernameContainsSpace.bind(this);
 
         this.buttonHiddenTriggerSignupLink = createRef();
     }
@@ -203,6 +205,23 @@ class Signup extends Component {
             });
         }
     };
+    handleUsernameContainsSpace = (event) => {
+        if (event.target.value !== "") {
+            if (event.target.value.indexOf(" ") < 1) {
+                this.setState({
+                    usernameContainsSpace: false,
+                });
+            } else {
+                this.setState({
+                    usernameContainsSpace: true,
+                });
+            }
+        } else {
+            this.setState({
+                usernameContainsSpace: "",
+            });
+        }
+    };
     render() {
         return (
             <div id="authentication">
@@ -236,7 +255,10 @@ class Signup extends Component {
                                     <input
                                         autoComplete="off"
                                         required
-                                        onKeyUp={this.handleSameUsername}
+                                        onKeyUp={(event) => {
+                                            this.handleSameUsername(event);
+                                            this.handleUsernameContainsSpace(event);
+                                        }}
                                         onChange={(event) => {
                                             this.handleFormChange(event.target.name, event.target.value.toLowerCase());
                                             this.handleid(event);
@@ -250,7 +272,10 @@ class Signup extends Component {
                                         <i className="fa-solid fa-circle-info"></i> first letter of the username cannot be a number
                                     </p>
                                     <p className={this.state.sameUsernameFound === true ? "urgentUsernameFound" : "urgentUsernameFound-none"}>
-                                        <i className="fa-solid fa-circle-info"></i> username found
+                                        <i className="fa-solid fa-circle-info"></i> username already exist
+                                    </p>
+                                    <p className={this.state.usernameContainsSpace === true ? "urgentUsernameFound" : "urgentUsernameFound-none"}>
+                                        <i className="fa-solid fa-circle-info"></i> username can't contains space
                                     </p>
                                     <br />
                                     <input

@@ -8,6 +8,7 @@ export const GetUserData = (linkRoot, path, username) => {
             },
             (err) => {
                 reject(err);
+                console.log("gada");
             }
         );
     });

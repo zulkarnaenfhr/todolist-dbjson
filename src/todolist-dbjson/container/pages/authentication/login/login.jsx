@@ -15,10 +15,12 @@ class LoginChild extends Component {
                 password: "",
             },
             statusLogin: "",
+            usernameContainsSpace: "",
             isSignUp: "",
         };
         this.handleFormChange = this.handleFormChange.bind(this);
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
+        this.handleUsernameContainsSpace = this.handleUsernameContainsSpace.bind(this);
 
         this.buttonHiddenTriggerLoginLink = createRef();
     }
@@ -61,6 +63,24 @@ class LoginChild extends Component {
         }
     }
 
+    handleUsernameContainsSpace = (event) => {
+        if (event.target.value !== "") {
+            if (event.target.value.indexOf(" ") < 1) {
+                this.setState({
+                    usernameContainsSpace: false,
+                });
+            } else {
+                this.setState({
+                    usernameContainsSpace: true,
+                });
+            }
+        } else {
+            this.setState({
+                usernameContainsSpace: "",
+            });
+        }
+    };
+
     render() {
         return (
             <div id="authentication">
@@ -92,9 +112,30 @@ class LoginChild extends Component {
                                     <p>username or password is incorrect</p>
                                 </div>
                                 <form action="" onSubmit={this.handleFormSubmit}>
-                                    <input required onChange={this.handleFormChange} className="formAuthentication-input container" placeholder="Enter Username" type="text" name="username" id="" />
+                                    <input
+                                        autoComplete="off"
+                                        onKeyUp={this.handleUsernameContainsSpace}
+                                        required
+                                        onChange={this.handleFormChange}
+                                        className="formAuthentication-input container"
+                                        placeholder="Enter Username"
+                                        type="text"
+                                        name="username"
+                                        id=""
+                                    />
+                                    <p className={this.state.usernameContainsSpace === true ? "urgentUsernameFound" : "urgentUsernameFound-none"}>
+                                        <i className="fa-solid fa-circle-info"></i> username can't contains space
+                                    </p>
                                     <br />
-                                    <input required onChange={this.handleFormChange} className="formAuthentication-input formAuthentication-input-secondLayer container" name="password" placeholder="Enter Password" type="password" />
+                                    <input
+                                        autoComplete="off"
+                                        required
+                                        onChange={this.handleFormChange}
+                                        className="formAuthentication-input formAuthentication-input-secondLayer container"
+                                        name="password"
+                                        placeholder="Enter Password"
+                                        type="password"
+                                    />
                                     <br />
                                     <div className="formAuthenticationSubmit-container">
                                         <button type="submit" style={{ backgroundColor: "#ea5f76" }}>
@@ -108,13 +149,6 @@ class LoginChild extends Component {
                                         Create Account
                                     </Link>
                                 </p>
-                                <button
-                                    onClick={() => {
-                                        console.log(this.state.isSignUp);
-                                    }}
-                                >
-                                    cek button
-                                </button>
                             </div>
                         </div>
                     </div>

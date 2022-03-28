@@ -1,80 +1,17 @@
 {
-  "userData": [
-    {
-      "id": "zulkarnaenfhr",
-      "password": "123",
-      "nama": "Fahri Izzuddin Zulkarnaen",
-      "tempatlahir": "Surabaya",
-      "notes": [
+    "userData": [
         {
-          "judul": "maman gendang",
-          "isi": "maman lagi makan cuy"
+            "id": "zulkarnaenfhr",
+            "password": "123",
+            "nama": "Fahri Izzuddin Zulkarnaen",
+            "tempatlahir": "Surabaya",
+            "notes": [
+                {
+                    "judul": "maman gendang",
+                    "isi": "maman lagi makan cuy"
+                }
+            ],
+            "firstRegister": false
         }
-      ],
-      "firstRegister": false
-    },
-    {
-      "id": "zulkarnaenfhr1",
-      "password": "10April2001",
-      "nama": "",
-      "tempatlahir": "",
-      "notes": [],
-      "firstRegister": true,
-      "verifyPassword": "10April2001"
-    },
-    {
-      "id": "mamanganteng",
-      "password": "10April2001",
-      "nama": "",
-      "tempatlahir": "",
-      "notes": [],
-      "firstRegister": true,
-      "verifyPassword": "10April2001"
-    },
-    {
-      "id": "sipapa",
-      "password": "123Number",
-      "nama": "",
-      "tempatlahir": "",
-      "notes": [],
-      "firstRegister": true,
-      "verifyPassword": "123Number"
-    },
-    {
-      "id": "cikuku1",
-      "password": "123numberA",
-      "nama": "",
-      "tempatlahir": "",
-      "notes": [],
-      "firstRegister": true,
-      "verifyPassword": "123numberA"
-    },
-    {
-      "id": "lambada",
-      "password": "123Number",
-      "nama": "",
-      "tempatlahir": "",
-      "notes": [],
-      "firstRegister": true,
-      "verifyPassword": "123Number"
-    },
-    {
-      "id": "cipipi",
-      "password": "123Number",
-      "nama": "",
-      "tempatlahir": "",
-      "notes": [],
-      "firstRegister": true,
-      "verifyPassword": "123Number"
-    },
-    {
-      "id": "mimin",
-      "password": "10April2001",
-      "nama": "",
-      "tempatlahir": "",
-      "notes": [],
-      "firstRegister": true,
-      "verifyPassword": "10April2001"
-    }
-  ]
+    ]
 }
