@@ -35,6 +35,19 @@
     display: none;
 }
 
+.urgentPasswordNotRequirement {
+    height: 10px;
+    text-align: justify;
+    padding-right: 10px;
+    font-size: 14px;
+    color: red;
+    margin-bottom: 5px;
+}
+
+.urgentPasswordNotRequirement-none {
+    display: none;
+}
+
 .alertPassword {
     margin-bottom: -5px;
 }

@@ -7,3 +7,25 @@
     display: flex;
     justify-content: center;
 }
+
+.alertLogin {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    margin-top: -15px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.alertWrongVerify {
+    background-color: rgb(255, 86, 71, 0.2);
+}
+
+.alertFromSignUp {
+    background-color: rgb(67, 211, 71, 0.3);
+}
+
+.alertLogin-hide {
+    display: none;
+}

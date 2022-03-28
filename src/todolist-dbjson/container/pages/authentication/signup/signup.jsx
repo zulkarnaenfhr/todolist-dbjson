@@ -150,7 +150,7 @@ class Signup extends Component {
         } else {
             formStatusPasswordValidationNew["containNumbers"] = false;
         }
-        if (event.target.value.length > 8) {
+        if (password.length > 7) {
             formStatusPasswordValidationNew["minimumLength"] = true;
         } else {
             formStatusPasswordValidationNew["minimumLength"] = false;
@@ -160,7 +160,10 @@ class Signup extends Component {
             formStatusPasswordValidation: formStatusPasswordValidationNew,
         });
 
-        const passwordValid = () => {
+        const passwordValid = async () => {
+            await this.setState({
+                statusPaswordValidation: false,
+            });
             if (
                 this.state.formStatusPasswordValidation.containNumbers === true &&
                 this.state.formStatusPasswordValidation.lowerCaseLetters === true &&
@@ -204,8 +207,19 @@ class Signup extends Component {
         return (
             <div id="authentication">
                 <div style={{ display: "none" }}>
-                    <Link ref={this.buttonHiddenTriggerSignupLink} to={`/todolist-dbjson/`}>
+                    {/* <Link ref={this.buttonHiddenTriggerSignupLink} to={`/todolist-dbjson/`}>
                         <p>Link to log in, after register success</p>
+                    </Link> */}
+                    <Link
+                        ref={this.buttonHiddenTriggerSignupLink}
+                        to={{
+                            pathname: "/todolist-dbjson/",
+                        }}
+                        state={{
+                            fromSignUp: true,
+                        }}
+                    >
+                        link to login, after signup success
                     </Link>
                 </div>
                 <div className="formAuthentication">
@@ -240,6 +254,7 @@ class Signup extends Component {
                                     </p>
                                     <br />
                                     <input
+                                        style={this.state.statusPaswordValidation !== true && this.state.password !== "" ? { border: "2px solid red" } : { border: "1px solid black" }}
                                         autoComplete="off"
                                         required
                                         onFocus={() => {
@@ -280,6 +295,13 @@ class Signup extends Component {
                                             <i className="fa-solid fa-circle-info"></i> lowercase
                                         </p>
                                     </div>
+                                    <p
+                                        className={
+                                            this.state.statusPaswordValidation === false && this.state.showPasswordValidation === false && this.state.password !== "" ? "urgentPasswordNotRequirement" : "urgentPasswordNotRequirement-none"
+                                        }
+                                    >
+                                        <i className="fa-solid fa-circle-info"></i> password does not meet the requirements
+                                    </p>
                                     <input
                                         autoComplete="off"
                                         required

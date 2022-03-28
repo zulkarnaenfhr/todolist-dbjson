@@ -1,6 +1,6 @@
 catatan per menu {
-    - sign up (udah)
+    - sign up (udah), KURANG PASSWORD ERROR
     - login {
-        
+        UDAH COBA COBA LAGI
     }
 }

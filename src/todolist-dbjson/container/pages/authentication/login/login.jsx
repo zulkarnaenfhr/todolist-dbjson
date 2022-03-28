@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import "./login.css";
 import "../authentication.css";
 import { API } from "../../../../service";
+import { useLocation } from "react-router-dom";
 
-class Login extends Component {
+class LoginChild extends Component {
     constructor(props) {
         super(props);
 
@@ -13,12 +14,15 @@ class Login extends Component {
                 username: "",
                 password: "",
             },
+            statusLogin: "",
+            isSignUp: "",
         };
         this.handleFormChange = this.handleFormChange.bind(this);
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
 
         this.buttonHiddenTriggerLoginLink = createRef();
     }
+
     handleFormChange = (event) => {
         const formLoginNew = { ...this.state.formLogin };
         formLoginNew[event.target.name] = event.target.value;
@@ -33,19 +37,30 @@ class Login extends Component {
         } else {
             API.getUserData(this.state.formLogin.username)
                 .then((result) => {
-                    console.log("data ditemukan", result.data);
                     if (this.state.formLogin.password === result.data.password) {
                         console.log("berhasil masuk");
                         this.buttonHiddenTriggerLoginLink.current.click();
                     } else {
-                        console.log("password salah");
+                        this.setState({
+                            statusLogin: false,
+                        });
                     }
                 })
                 .catch((err) => {
-                    alert("salah jon");
+                    this.setState({
+                        statusLogin: false,
+                    });
                 });
         }
     };
+    async componentDidMount() {
+        if (this.props.location.state !== null) {
+            await this.setState({
+                isSignUp: this.props.location.state.fromSignUp,
+            });
+        }
+    }
+
     render() {
         return (
             <div id="authentication">
@@ -56,13 +71,9 @@ class Login extends Component {
                             pathname: "/todolist-dbjson/homepage",
                         }}
                         state={{ nama: this.state.formLogin.username, password: this.state.formLogin.password }}
-                        id={this.state.formLogin.username}
                     >
                         <p>link to homepage, after log in success</p>
                     </Link>
-                    {/* <Link ref={this.buttonHiddenTriggerLoginLink} to={`/todolist-dbjson/homepage`} id={this.state.formLogin.username}>
-                        <p>link to homepage, after log in success</p>
-                    </Link> */}
                 </div>
                 <div className="formAuthentication">
                     <div className="formAuthentication-header container">
@@ -74,18 +85,21 @@ class Login extends Component {
                     <div className="formAuthentication-body">
                         <div className="container formAuthentication-body-container">
                             <div>
-                                <form action="">
-                                    <input onChange={this.handleFormChange} className="formAuthentication-input container" placeholder="Enter Username" type="text" name="username" id="" />
+                                <div className={this.state.isSignUp === true && this.state.statusLogin !== false ? "alertLogin alertFromSignUp" : "alertLogin-hide"}>
+                                    <p>sign up success</p>
+                                </div>
+                                <div className={this.state.statusLogin === false ? "alertLogin alertWrongVerify" : "alertLogin-hide"}>
+                                    <p>username or password is incorrect</p>
+                                </div>
+                                <form action="" onSubmit={this.handleFormSubmit}>
+                                    <input required onChange={this.handleFormChange} className="formAuthentication-input container" placeholder="Enter Username" type="text" name="username" id="" />
                                     <br />
-                                    <input onChange={this.handleFormChange} className="formAuthentication-input formAuthentication-input-secondLayer container" name="password" placeholder="Enter Password" type="password" />
+                                    <input required onChange={this.handleFormChange} className="formAuthentication-input formAuthentication-input-secondLayer container" name="password" placeholder="Enter Password" type="password" />
                                     <br />
                                     <div className="formAuthenticationSubmit-container">
-                                        <button onClick={this.handleFormSubmit} style={{ backgroundColor: "#ea5f76" }}>
+                                        <button type="submit" style={{ backgroundColor: "#ea5f76" }}>
                                             Log in
                                         </button>
-                                        {/* <Link onClick={this.handleFormSubmit} className="buttonLogin" style={{ color: "black", textDecoration: "none" }} to={`/todolist-dbjson/homepage`}>
-                                            <span style={{ marginTop: "7px" }}>Log In</span>
-                                        </Link> */}
                                     </div>
                                 </form>
                                 <p className="anotherAuth">
@@ -96,7 +110,7 @@ class Login extends Component {
                                 </p>
                                 <button
                                     onClick={() => {
-                                        console.log(this.state.formLogin);
+                                        console.log(this.state.isSignUp);
                                     }}
                                 >
                                     cek button
@@ -109,5 +123,11 @@ class Login extends Component {
         );
     }
 }
+
+const Login = () => {
+    const location = useLocation();
+
+    return <LoginChild location={location} />;
+};
 
 export default Login;
