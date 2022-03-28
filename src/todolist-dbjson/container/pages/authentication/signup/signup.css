@@ -1,0 +1,40 @@
+.urgentFirstLetterUsername {
+    height: 0px;
+    text-align: justify;
+    padding-right: 10px;
+    font-size: 14px;
+    color: red;
+}
+
+.urgentFirstLetterUsername-none {
+    display: none;
+}
+.urgentUsernameFound {
+    height: 0px;
+    text-align: justify;
+    padding-right: 10px;
+    font-size: 14px;
+    color: red;
+    margin-bottom: -10px;
+}
+
+.urgentUsernameFound-none {
+    display: none;
+}
+
+.urgentPassword {
+    height: 10px;
+    text-align: justify;
+    padding-right: 10px;
+    font-size: 14px;
+    color: red;
+    margin-bottom: -5px;
+}
+
+.urgentPassword-none {
+    display: none;
+}
+
+.alertPassword {
+    margin-bottom: -5px;
+}

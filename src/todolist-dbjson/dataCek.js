@@ -1,12 +1,8 @@
 export const data = {
-    userAdmin: [
+    userData: [
         {
             username: "zulkarnaenfhr",
             password: "mamanGendang",
-        },
-    ],
-    userData: {
-        zulkarnaenfhr: {
             nama: "Fahri Izzuddin Zulkarnaen",
             tempatlahir: "Surabaya",
             notes: [
@@ -16,5 +12,5 @@ export const data = {
                 },
             ],
         },
-    },
+    ],
 };

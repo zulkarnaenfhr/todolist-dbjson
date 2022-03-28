@@ -1,0 +1,9 @@
+.buttonLogin {
+    width: 340px;
+    height: 42px;
+    border-radius: 6px;
+    border: 1px solid rgb(17, 17, 17, 0.48);
+    background-color: #ea5f76;
+    display: flex;
+    justify-content: center;
+}

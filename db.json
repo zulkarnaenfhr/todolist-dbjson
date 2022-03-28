@@ -1,12 +1,8 @@
 {
-    "userAdmin": [
+    "userData": [
         {
-            "username": "zulkarnaenfhr",
-            "password": "mamanGendang"
-        }
-    ],
-    "userData": {
-        "zulkarnaenfhr": {
+            "id": "zulkarnaenfhr",
+            "password": "123",
             "nama": "Fahri Izzuddin Zulkarnaen",
             "tempatlahir": "Surabaya",
             "notes": [
@@ -14,7 +10,17 @@
                     "judul": "maman gendang",
                     "isi": "maman lagi makan cuy"
                 }
-            ]
+            ],
+            "firstRegister": false
+        },
+        {
+            "id": "zulkarnaenfhr1",
+            "password": "10April2001",
+            "nama": "",
+            "tempatlahir": "",
+            "notes": [],
+            "firstRegister": true,
+            "verifyPassword": "10April2001"
         }
-    }
+    ]
 }

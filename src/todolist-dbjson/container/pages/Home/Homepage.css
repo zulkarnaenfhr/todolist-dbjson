@@ -1,0 +1,15 @@
+#Homepage {
+    display: flex;
+}
+
+#Homepage-content {
+    background-color: #d1d1d1;
+    width: 100%;
+    height: 100rem;
+    margin-left: 400px;
+}
+
+/* #Homepage-navbar {
+    position: fixed;
+    height: 100vh;
+} */
