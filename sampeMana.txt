@@ -2,3 +2,7 @@ catatan per menu {
     - sign up (udah)
     - login (udah)
 }
+
+sampe mana {
+    - wayahe homepage
+}

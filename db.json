@@ -5,12 +5,16 @@
             "password": "123",
             "nama": "Fahri Izzuddin Zulkarnaen",
             "tempatlahir": "Surabaya",
-            "notes": [
-                {
-                    "judul": "maman gendang",
-                    "isi": "maman lagi makan cuy"
-                }
-            ],
+            "todo": {
+                "belanja": [
+                    {
+                        "isi": "belanja bahan kue"
+                    },
+                    {
+                        "isi": "belanja makanan"
+                    }
+                ]
+            },
             "firstRegister": false
         }
     ]

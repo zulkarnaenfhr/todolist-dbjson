@@ -40,7 +40,6 @@ class LoginChild extends Component {
             API.getUserData(this.state.formLogin.username)
                 .then((result) => {
                     if (this.state.formLogin.password === result.data.password) {
-                        console.log("berhasil masuk");
                         this.buttonHiddenTriggerLoginLink.current.click();
                     } else {
                         this.setState({
@@ -90,7 +89,7 @@ class LoginChild extends Component {
                         to={{
                             pathname: "/todolist-dbjson/homepage",
                         }}
-                        state={{ nama: this.state.formLogin.username, password: this.state.formLogin.password }}
+                        state={{ username: this.state.formLogin.username, password: this.state.formLogin.password }}
                     >
                         <p>link to homepage, after log in success</p>
                     </Link>

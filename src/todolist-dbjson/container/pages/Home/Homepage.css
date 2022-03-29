@@ -2,14 +2,16 @@
     display: flex;
 }
 
-#Homepage-content {
-    background-color: #d1d1d1;
-    width: 100%;
-    height: 100rem;
-    margin-left: 400px;
+.HomepageSideNavbar-container {
+    position: fixed;
+    width: 400px;
+    height: 100vh;
 }
 
-/* #Homepage-navbar {
-    position: fixed;
-    height: 100vh;
-} */
+.HomepageContent-container {
+    width: 100%;
+    border: 1px solid red;
+    align-items: center;
+    height: 1000rem;
+    margin-left: 400px;
+}

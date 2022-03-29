@@ -1,0 +1,17 @@
+{
+    "userData": [
+        {
+            "id": "zulkarnaenfhr",
+            "password": "123",
+            "nama": "Fahri Izzuddin Zulkarnaen",
+            "tempatlahir": "Surabaya",
+            "todo": [
+                {
+                    "isi": "makan",
+                    "category": "penting"
+                }
+            ],
+            "firstRegister": false
+        }
+    ]
+}
