@@ -58,8 +58,8 @@ class Signup extends Component {
             formStep: 2,
         });
     };
-    handleSubmitFormRegister = () => {
-        // event.preventDefault();
+    handleSubmitFormRegister = (event) => {
+        event.preventDefault();
 
         const canInput = async () => {
             await API.postUserData(this.state.userData);
@@ -338,9 +338,7 @@ class Signup extends Component {
                                             professionCategory={this.state.professionCategory}
                                             // akhir profession
 
-                                            cekState={() => {
-                                                console.log(this.state.userData);
-                                            }}
+                                            handleForm2Submit={(event) => this.handleSubmitFormRegister(event)}
                                         />
                                         <p className="anotherAuth">
                                             Already have an account?

@@ -5,7 +5,8 @@ catatan per menu {
 
 sampe mana {
     signUp {
-        - ada pembaruan step form (jadi biar langsung ngisi)
+        - tinggal yang pekerjaan
+
     }
     homepage {
         - sideNavbar {

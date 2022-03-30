@@ -84,3 +84,23 @@
     left: 10px;
     text-decoration: none;
 }
+
+.formAuthentication-date {
+    width: 340px;
+    height: 44px;
+    border: 1px solid rgb(17, 17, 17, 0.48);
+    border-radius: 6px;
+}
+
+.formAuthentication-date:not(.has-value):before {
+    color: rgb(14, 13, 13, 0.4);
+    content: attr(placeholder);
+    padding-right: 10px;
+}
+
+.formAuthentication-select {
+    width: 340px;
+    height: 44px;
+    border: 1px solid rgb(17, 17, 17, 0.48);
+    border-radius: 6px;
+}

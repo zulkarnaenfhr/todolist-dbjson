@@ -1,49 +1,25 @@
 {
-  "userData": [
-    {
-      "id": "zulkarnaenfhr",
-      "password": "123",
-      "name": "Fahri Izzuddin Zulkarnaen",
-      "profession": "Mahasiswa Baru a",
-      "placeofbirth": "Surabaya",
-      "dateofbirth": "Tue Apr 10 2001 00:00:00 GMT+0700 (Indochina Time)",
-      "todo": {
-        "belanja": [
-          {
-            "isi": "belanja bahan kue"
-          },
-          {
-            "isi": "belanja makanan"
-          }
-        ],
-        "kegiatan": []
-      },
-      "firstRegister": false
-    },
-    {
-      "id": "mamang",
-      "password": "123April",
-      "name": "",
-      "profession": "",
-      "placeofbirth": "",
-      "dateofbirth": "",
-      "todo": [],
-      "firstRegister": true
-    },
-    {
-      "id": "miminganteng",
-      "password": "123April",
-      "name": "",
-      "profession": "",
-      "placeofbirth": "",
-      "dateofbirth": "",
-      "todo": [],
-      "firstRegister": true
-    }
-  ],
-  "professioncategory": [
-    "Mahasiswa",
-    "Karyawan Swasta",
-    "Pegawai Negeri"
-  ]
+    "userData": [
+        {
+            "id": "zulkarnaenfhr",
+            "password": "123",
+            "name": "Fahri Izzuddin Zulkarnaen",
+            "profession": "Mahasiswa Baru a",
+            "placeofbirth": "Surabaya",
+            "dateofbirth": "Tue Apr 10 2001 00:00:00 GMT+0700 (Indochina Time)",
+            "todo": {
+                "belanja": [
+                    {
+                        "isi": "belanja bahan kue"
+                    },
+                    {
+                        "isi": "belanja makanan"
+                    }
+                ],
+                "kegiatan": []
+            },
+            "firstRegister": false
+        }
+    ],
+    "professioncategory": ["Mahasiswa", "Karyawan Swasta", "Pegawai Negeri"]
 }

@@ -7,7 +7,7 @@ class Signupstep1 extends Component {
                 {this.props.formStep !== 1 ? (
                     ""
                 ) : (
-                    <form action="">
+                    <form action="" onSubmit={this.props.handleForm1Submit}>
                         <input
                             autoComplete="off"
                             required
@@ -89,8 +89,8 @@ class Signupstep1 extends Component {
                         </p>
                         <br />
                         <div className="formAuthenticationSubmit-container">
-                            <button onClick={this.props.handleForm1Submit} style={{ backgroundColor: "#6495ED" }}>
-                                Sign Up
+                            <button type="submit" style={{ backgroundColor: "#6495ED" }}>
+                                Next Form
                             </button>
                         </div>
                     </form>
