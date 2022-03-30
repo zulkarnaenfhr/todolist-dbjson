@@ -20,18 +20,18 @@ class Signupstep1 extends Component {
                                 this.props.onFirstLetterUsername(event);
                             }}
                             className="formAuthentication-input container"
-                            placeholder="enter username"
+                            placeholder="Enter Username"
                             type="text"
                             name="id"
                             value={this.props.username}
                         />
                         <p className={this.props.statusFirstLetterUsername === true ? "urgentFirstLetterUsername" : "urgentFirstLetterUsername-none"}>
-                            <i className="fa-solid fa-circle-info"></i> first letter of the username cannot be a number
+                            <i className="fa-solid fa-circle-info"></i> first letter of the username cannot be a number or a space
                         </p>
                         <p className={this.props.sameUsernameFound === true ? "urgentUsernameFound" : "urgentUsernameFound-none"}>
                             <i className="fa-solid fa-circle-info"></i> username already exist
                         </p>
-                        <p className={this.props.usernameContainsSpace === true ? "urgentUsernameFound" : "urgentUsernameFound-none"}>
+                        <p className={this.props.onUsernameContainsSpace === true ? "urgentUsernameFound" : "urgentUsernameFound-none"}>
                             <i className="fa-solid fa-circle-info"></i> username can't contains space
                         </p>
                         <br />
@@ -47,7 +47,7 @@ class Signupstep1 extends Component {
                                 this.props.onHandleSamePassword(event);
                             }}
                             className="formAuthentication-input formAuthentication-input-secondLayer container"
-                            placeholder="enter password"
+                            placeholder="Enter Password"
                             type="password"
                             name="password"
                         />
@@ -80,7 +80,7 @@ class Signupstep1 extends Component {
                                 this.props.onHandleSamePassword(event);
                             }}
                             className="formAuthentication-input formAuthentication-input-secondLayer container"
-                            placeholder="confirm password"
+                            placeholder="Confirm Password"
                             type="password"
                             name="verifyPassword"
                         />

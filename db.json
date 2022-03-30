@@ -59,6 +59,16 @@
       "dateofbirth": "2022-03-14",
       "todo": [],
       "firstRegister": true
+    },
+    {
+      "id": "bambang",
+      "password": "123April",
+      "name": "bambang ganteng",
+      "profession": "Mahasiswa",
+      "placeofbirth": "sidoarjo",
+      "dateofbirth": "2022-03-21",
+      "todo": [],
+      "firstRegister": true
     }
   ],
   "professioncategory": [

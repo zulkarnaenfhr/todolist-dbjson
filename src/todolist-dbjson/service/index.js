@@ -1,4 +1,3 @@
-import axios from "axios";
 import { GetAllProfessionCategory } from "./Profession Category/getAllProfessionCategory";
 import { GetUserData } from "./Users Data/getUserData";
 import { Post } from "./Users Data/postsUserData";
