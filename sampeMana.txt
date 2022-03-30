@@ -4,5 +4,16 @@ catatan per menu {
 }
 
 sampe mana {
-    - wayahe homepage
+    signUp {
+        - ada pembaruan step form (jadi biar langsung ngisi)
+    }
+    homepage {
+        - sideNavbar {
+            - udah bisa ambil data 
+            - udah bisa add category
+            - ganti form doang
+        }
+        
+    }
 }
+

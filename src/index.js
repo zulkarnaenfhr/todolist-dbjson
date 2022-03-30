@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
+import Signup2 from "./todolist-dbjson/container/pages/authentication/signup2/signup2";
 import TodolistDbjson from "./todolist-dbjson/todolist-dbjson";
 
 ReactDOM.render(
