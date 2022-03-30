@@ -16,8 +16,8 @@ class TodolistDbjson extends Component {
                     <Route
                         path="*"
                         element={
-                            <div>
-                                <p>not found</p>
+                            <div id="notfound-page-container">
+                                <p>Page Not Found</p>
                             </div>
                         }
                     />{" "}

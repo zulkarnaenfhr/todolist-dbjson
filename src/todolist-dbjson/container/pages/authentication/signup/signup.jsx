@@ -4,6 +4,7 @@ import "./signup.css";
 import { API } from "../../../../service";
 import Signupstep1 from "../../../../component/signupForm/signUpStep1";
 import Signupstep2 from "../../../../component/signupForm/signUpStep2";
+import Swal from "sweetalert2";
 
 class Signup extends Component {
     constructor(props) {
@@ -63,7 +64,6 @@ class Signup extends Component {
 
         const canInput = async () => {
             await API.postUserData(this.state.userData);
-            alert("pendaftaran berhasil");
             this.setState({
                 userData: {
                     id: "",
@@ -75,6 +75,12 @@ class Signup extends Component {
                     todo: [],
                     firstRegister: true,
                 },
+            });
+            await Swal.fire({
+                icon: "success",
+                title: "<strong>Successful Registration!</strong>",
+                footer: "<p>Please Login, With Your Account</p>",
+                timer: "3000",
             });
             this.buttonHiddenTriggerSignupLink.current.click();
         };

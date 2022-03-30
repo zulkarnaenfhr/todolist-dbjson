@@ -46,7 +46,7 @@ class Signupstep2 extends Component {
                         </select>
                         <div className="formAuthenticationSubmit-container">
                             <button type="submit" style={{ backgroundColor: "#6495ED" }}>
-                                Next Form
+                                Sign Up
                             </button>
                         </div>
                     </form>

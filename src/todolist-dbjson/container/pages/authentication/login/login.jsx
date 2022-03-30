@@ -4,6 +4,7 @@ import "./login.css";
 import "../authentication.css";
 import { API } from "../../../../service";
 import { useLocation } from "react-router-dom";
+import Swal from "sweetalert2";
 
 class LoginChild extends Component {
     constructor(props) {
@@ -38,18 +39,30 @@ class LoginChild extends Component {
             console.log("gaoleh masuk");
         } else {
             API.getUserData(this.state.formLogin.username)
-                .then((result) => {
+                .then(async (result) => {
                     if (this.state.formLogin.password === result.data.password) {
                         this.buttonHiddenTriggerLoginLink.current.click();
                     } else {
                         this.setState({
                             statusLogin: false,
                         });
+                        await Swal.fire({
+                            icon: "error",
+                            title: "<strong>Incorrect Username or Password!</strong>",
+                            text: "Please Sign Up, if you don't have any account",
+                            timer: "3000",
+                        });
                     }
                 })
-                .catch((err) => {
+                .catch(async (err) => {
                     this.setState({
                         statusLogin: false,
+                    });
+                    await Swal.fire({
+                        icon: "error",
+                        title: "<error>Incorrect Username or Password!</error>",
+                        text: "Please Sign Up, if you don't have any account",
+                        timer: "3000",
                     });
                 });
         }
@@ -105,10 +118,10 @@ class LoginChild extends Component {
                         <div className="container formAuthentication-body-container">
                             <div>
                                 <div className={this.state.isSignUp === true && this.state.statusLogin !== false ? "alertLogin alertFromSignUp" : "alertLogin-hide"}>
-                                    <p>sign up success</p>
+                                    <p>Sign Up Success</p>
                                 </div>
                                 <div className={this.state.statusLogin === false ? "alertLogin alertWrongVerify" : "alertLogin-hide"}>
-                                    <p>username or password is incorrect</p>
+                                    <p>Incorrect Username or Password!</p>
                                 </div>
                                 <form action="" onSubmit={this.handleFormSubmit}>
                                     <input
@@ -143,7 +156,7 @@ class LoginChild extends Component {
                                     </div>
                                 </form>
                                 <p className="anotherAuth">
-                                    not registered yet?
+                                    Not registered yet?
                                     <Link className="anotherAuthLink" style={{ color: "#6495ED" }} to={`/todolist-dbjson/signUp`}>
                                         Create Account
                                     </Link>
