@@ -1,79 +1,75 @@
 {
-  "userData": [
-    {
-      "id": "zulkarnaenfhr",
-      "password": "123",
-      "name": "Fahri Izzuddin Zulkarnaen",
-      "profession": "Mahasiswa Baru a",
-      "placeofbirth": "Surabaya",
-      "dateofbirth": "Tue Apr 10 2001 00:00:00 GMT+0700 (Indochina Time)",
-      "todo": {
-        "belanja": [
-          {
-            "isi": "belanja bahan kue"
-          },
-          {
-            "isi": "belanja makanan"
-          }
-        ],
-        "kegiatan": []
-      },
-      "firstRegister": false
-    },
-    {
-      "id": "mamanganteng",
-      "password": "123April",
-      "name": "maman ganteng",
-      "profession": "Mahasiswa",
-      "placeofbirth": "surabaya",
-      "dateofbirth": "2022-03-10",
-      "todo": [],
-      "firstRegister": true
-    },
-    {
-      "id": "mers",
-      "password": "123April",
-      "name": "123",
-      "profession": "Mahasiswa",
-      "placeofbirth": "123",
-      "dateofbirth": "2022-03-08",
-      "todo": [],
-      "firstRegister": true
-    },
-    {
-      "id": "qweq",
-      "password": "123April",
-      "name": "123",
-      "profession": "Mahasiswa",
-      "placeofbirth": "123",
-      "dateofbirth": "2022-03-02",
-      "todo": [],
-      "firstRegister": true
-    },
-    {
-      "id": "ad",
-      "password": "123April",
-      "name": "asd",
-      "profession": "Mahasiswa",
-      "placeofbirth": "asdfsa",
-      "dateofbirth": "2022-03-14",
-      "todo": [],
-      "firstRegister": true
-    },
-    {
-      "id": "bambang",
-      "password": "123April",
-      "name": "bambang ganteng",
-      "profession": "Mahasiswa",
-      "placeofbirth": "sidoarjo",
-      "dateofbirth": "2022-03-21",
-      "todo": [],
-      "firstRegister": true
-    }
-  ],
-  "professioncategory": [
-    "Mahasiswa",
-    "Karyawan Swasta",
-    "Pegawai Negeri"
-  ]
+    "userData": [
+        {
+            "id": "zulkarnaenfhr",
+            "password": "123",
+            "name": "Fahri Izzuddin Zulkarnaen",
+            "profession": "Mahasiswa Baru",
+            "placeofbirth": "Surabaya",
+            "dateofbirth": "2001-04-14",
+            "todo": {
+                "Belanja": [
+                    {
+                        "isi": "belanja bahan kue"
+                    },
+                    {
+                        "isi": "belanja makanan"
+                    }
+                ],
+                "Kegiatan": []
+            },
+            "firstRegister": false
+        },
+        {
+            "id": "mamanganteng",
+            "password": "123April",
+            "name": "maman ganteng",
+            "profession": "Mahasiswa",
+            "placeofbirth": "surabaya",
+            "dateofbirth": "2022-03-10",
+            "todo": [],
+            "firstRegister": true
+        },
+        {
+            "id": "mers",
+            "password": "123April",
+            "name": "123",
+            "profession": "Mahasiswa",
+            "placeofbirth": "123",
+            "dateofbirth": "2022-03-08",
+            "todo": [],
+            "firstRegister": true
+        },
+        {
+            "id": "qweq",
+            "password": "123April",
+            "name": "123",
+            "profession": "Mahasiswa",
+            "placeofbirth": "123",
+            "dateofbirth": "2022-03-02",
+            "todo": [],
+            "firstRegister": true
+        },
+        {
+            "id": "ad",
+            "password": "123April",
+            "name": "asd",
+            "profession": "Mahasiswa",
+            "placeofbirth": "asdfsa",
+            "dateofbirth": "2022-03-14",
+            "todo": [],
+            "firstRegister": true
+        },
+        {
+            "id": "bambang",
+            "password": "123April",
+            "name": "bambang ganteng",
+            "profession": "Mahasiswa",
+            "placeofbirth": "sidoarjo",
+            "dateofbirth": "2022-03-21",
+            "todo": [],
+            "firstRegister": true
+        }
+    ],
+    "professioncategory": ["Mahasiswa", "Karyawan Swasta", "Pegawai Negeri"]
 }

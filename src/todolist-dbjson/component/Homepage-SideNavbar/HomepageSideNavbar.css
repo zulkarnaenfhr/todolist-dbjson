@@ -27,7 +27,7 @@
     border-radius: 50%;
 }
 
-.account-name {
+.profile-name {
     position: relative;
     top: 14.5px;
     left: 10px;
@@ -35,9 +35,24 @@
 
 .buttonEditProfile {
     position: relative;
-    left: 300px;
+    left: 275px;
 }
 
-.profileData {
-    margin-top: 20px;
+.profile-data-container {
+    border: 2px solid red;
+}
+
+.tableProfileData tr {
+    height: 35px;
+}
+
+.homepageSideNavbar-category-button {
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    text-align: left;
+    color: white;
+    font-size: 25px;
+    font-family: "Poppins", sans-serif;
 }

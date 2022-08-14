@@ -18,6 +18,7 @@ class HomepageSideNavbarContainer extends Component {
         this.handleToUpdateProfile = this.handleToUpdateProfile.bind(this);
         this.handleFormProfileUpdate = this.handleFormProfileUpdate.bind(this);
         this.handleSubmitUpdateProfile = this.handleSubmitUpdateProfile.bind(this);
+        this.handleCategoryChange = this.handleCategoryChange.bind(this);
     }
 
     handleToUpdateProfile = () => {
@@ -49,6 +50,11 @@ class HomepageSideNavbarContainer extends Component {
         API.putUserData(this.state.userProfile.id, userProfileNew);
     };
 
+    handleCategoryChange = (event) => {
+        // this.props.onCategoryChange((event)=> )
+        this.props.onCategoryChange(event.target.name);
+    };
+
     async componentDidMount() {
         await API.getUserData(this.props.data.state.username).then((data) => {
             this.setState({
@@ -70,92 +76,99 @@ class HomepageSideNavbarContainer extends Component {
                         <div className="homepageSideNavbar-profile-container">
                             <button style={{ display: "flex" }} className="homepageSideNavbar-profile container" data-bs-toggle="collapse" href="#collapseExample">
                                 <img className="profile-photo" src="https://i.ibb.co/zPp1Zrh/Profile-Pictures.jpg" alt="Profile-Pictures" border="0"></img>
-                                <p className="account-name">{this.state.userProfile.name}</p>{" "}
+                                <p className="profile-name">{this.state.userProfile.name}</p>{" "}
                             </button>
-                            <div className="collapse" id="collapseExample">
+                            <div className="collapse profile-data-container container" id="collapseExample">
                                 <button onClick={this.handleToUpdateProfile} className="buttonEditProfile">
                                     Edit Profile
                                 </button>
                                 {this.state.editProfile === false ? (
                                     <div className="profileData">
-                                        <table>
+                                        <table className="tableProfileData">
                                             <thead></thead>
                                             <tbody>
-                                                <tr>
-                                                    <th>Id </th>
-                                                    <th>:</th>
-                                                    <th>{this.state.userProfile.id}</th>
+                                                <tr className="profile-data-table-row">
+                                                    <td>Id </td>
+                                                    <td>:</td>
+                                                    <td>{this.state.userProfile.id}</td>
                                                 </tr>
-                                                <tr>
-                                                    <th>Name </th>
-                                                    <th>:</th>
-                                                    <th>{this.state.userProfile.name}</th>
+                                                <tr className="profile-data-table-row">
+                                                    <td>Name </td>
+                                                    <td>:</td>
+                                                    <td>{this.state.userProfile.name}</td>
                                                 </tr>
-                                                <tr>
-                                                    <th>Profession </th>
-                                                    <th>:</th>
-                                                    <th>{this.state.userProfile.profession}</th>
+                                                <tr className="profile-data-table-row">
+                                                    <td>Profession </td>
+                                                    <td>:</td>
+                                                    <td>{this.state.userProfile.profession}</td>
                                                 </tr>
-                                                <tr>
-                                                    <th>Place of Birth </th>
-                                                    <th>:</th>
-                                                    <th>{this.state.userProfile.placeofbirth}</th>
+                                                <tr className="profile-data-table-row">
+                                                    <td>Place of Birth </td>
+                                                    <td>:</td>
+                                                    <td>{this.state.userProfile.placeofbirth}</td>
                                                 </tr>
-                                                <tr>
-                                                    <th>Date of Birth </th>
-                                                    <th>:</th>
-                                                    <th>{getDateFormat(this.state.userProfile.dateofbirth)}</th>
+                                                <tr className="profile-data-table-row">
+                                                    <td>Date of Birth </td>
+                                                    <td>:</td>
+                                                    <td>{getDateFormat(this.state.userProfile.dateofbirth)}</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
                                 ) : (
                                     <div className="editProfileData">
-                                        <table>
+                                        <table className="tableProfileData">
                                             <thead></thead>
                                             <tbody>
                                                 <tr>
-                                                    <th>Id </th>
-                                                    <th>:</th>
-                                                    <th>{this.state.userProfile.id}</th>
+                                                    <td>Id </td>
+                                                    <td>:</td>
+                                                    <td>{this.state.userProfile.id}</td>
                                                 </tr>
                                                 <tr>
-                                                    <th>Name </th>
-                                                    <th>:</th>
-                                                    <th>
+                                                    <td>Name </td>
+                                                    <td>:</td>
+                                                    <td>
                                                         <input onChange={this.handleFormProfileUpdate} type="text" name="name" value={this.state.userProfile.name} />
-                                                    </th>
+                                                    </td>
                                                 </tr>
                                                 <tr>
-                                                    <th>Profession </th>
-                                                    <th>:</th>
-                                                    <th>
+                                                    <td>Profession </td>
+                                                    <td>:</td>
+                                                    <td>
                                                         <input onChange={this.handleFormProfileUpdate} type="text" name="profession" value={this.state.userProfile.profession} />
-                                                    </th>
+                                                    </td>
                                                 </tr>
                                                 <tr>
-                                                    <th>Place of Birth </th>
-                                                    <th>:</th>
-                                                    <th>
+                                                    <td>Place of Birth </td>
+                                                    <td>:</td>
+                                                    <td>
                                                         <input onChange={this.handleFormProfileUpdate} type="text" name="placeofbirth" value={this.state.userProfile.placeofbirth} />
-                                                    </th>
+                                                    </td>
                                                 </tr>
                                                 <tr>
-                                                    <th>Date of Birth </th>
-                                                    <th>:</th>
-                                                    <th>
+                                                    <td>Date of Birth </td>
+                                                    <td>:</td>
+                                                    <td>
                                                         <input onChange={this.handleFormProfileUpdate} type="date" name="dateofbirth" value={getDefaultDate(this.state.userProfile.dateofbirth)} />
-                                                    </th>
+                                                    </td>
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        {/* pindah button ke kanan */}
                                         <button onClick={this.handleSubmitUpdateProfile}>submit</button>
                                     </div>
                                 )}
                             </div>
                         </div>
+                        <div className="homepageSideNavbar-category-container">
+                            {Object.keys(this.state.userProfile.todo).map((category) => (
+                                <button onClick={this.handleCategoryChange} name={category} key={category} className="homepageSideNavbar-category-button">
+                                    {category}
+                                </button>
+                            ))}
+                        </div>
                         <div className="homepageSideNavbar-menu">
-                            <p>masuk</p>
                             <Link ref={this.buttonHiddenTriggerNotLogin} to={`/todolist-dbjson/`}>
                                 <button>Logout</button>
                             </Link>
@@ -183,7 +196,7 @@ const Homepagesidenavbar = (props) => {
             navigate(`/todolist-dbjson/`);
         }
     }, []);
-    return <HomepageSideNavbarContainer data={props.data} />;
+    return <HomepageSideNavbarContainer onCategoryChange={(category) => props.onCategoryChange(category)} data={props.data} />;
 };
 
 export default Homepagesidenavbar;
